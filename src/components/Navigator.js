@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot, faCartPlus } from "@fortawesome/free-solid-svg-icons";
 
 const Header = styled.div`
-  position: relative;
+  position: fixed;
+  width: 100%;
   top: 0;
-  left: 0;
   margin: 0;
   padding: 0;
   height: 88px;
