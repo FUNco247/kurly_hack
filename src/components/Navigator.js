@@ -28,6 +28,7 @@ const HeaderMain = styled.div`
 const Logo = styled.div`
   height: 30px;
   font-size: 28px;
+  font-family: "Dancing Script", cursive;
 `;
 
 const SelectMarketBtn = styled.div`
