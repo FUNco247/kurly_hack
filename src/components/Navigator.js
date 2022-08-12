@@ -6,12 +6,14 @@ const Header = styled.div`
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 1000;
   margin: 0;
   padding: 0;
   height: 88px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 2fr;
+  box-sizing: border-box;
 `;
 
 const HeaderMain = styled.div`
@@ -57,16 +59,17 @@ const LocationAndCart = styled.div`
 const HeaderMenu = styled.div`
   height: 44px;
   display: flex;
+  background-color: white;
   justify-content: space-between;
   align-items: center;
   border-bottom: solid 0.5px #999999;
   div {
     &:first-child {
       margin-left: 16px;
-      color: #5f0080;
-      border-bottom: solid 2px #5f0080;
     }
     &:last-child {
+      color: #5f0080;
+      border-bottom: solid 2px #5f0080;
       margin-right: 16px;
     }
   }
@@ -111,8 +114,8 @@ function Navigator() {
           <Menu>컬리추천</Menu>
           <Menu>신상품</Menu>
           <Menu>베스트</Menu>
-          <Menu>알뜰쇼핑</Menu>
           <Menu>특가/혜택</Menu>
+          <Menu>컬리버드</Menu>
         </HeaderMenu>
       </Header>
     </>
