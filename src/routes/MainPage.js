@@ -5,6 +5,7 @@ function MainPage() {
   return (
     <>
       <Navigator />
+      <svg src="../logo/kurly_logo.svg"></svg>
       <BottomMenu />
     </>
   );
