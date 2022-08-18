@@ -22,9 +22,6 @@ function MainPage() {
       <Navigator />
       <ProductBox>
         <Products />
-        <Products />
-        <Products />
-        <Products />
       </ProductBox>
       <BottomMenu />
     </Wrapper>
