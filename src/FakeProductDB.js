@@ -27,6 +27,7 @@ const fakeProductDB = [
         price: "2800",
       },
     ],
+    articles: [],
   },
   {
     categoryId: "2",
@@ -35,20 +36,35 @@ const fakeProductDB = [
     subtitle: "배추 가격이 오를것 같아요",
     items: [
       {
+        id: "201",
         name: "이름이 기이이인 어디선가 온 친환경 배추 120g",
         imgSrc: "https://img.hankyung.com/photo/202010/01.24087325.1.jpg",
         price: "3000",
       },
       {
+        id: "202",
         name: "친환경 뒷마당 배추 200g",
         imgSrc:
           "https://www.shinsegaegroupnewsroom.com/wp-content/uploads/2019/12/%EC%9D%B4%EB%A7%88%ED%8A%B8-%EB%B0%B0%EC%B6%94-%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%BB%B7.jpg",
         price: "4200",
       },
       {
+        id: "203",
         name: "이름이 너무 길어서 2줄 안에 다 담지 못하고 결국 ...을 표시하며 몇g인지 보지도 못하게 글씨가 짤려버릴것 같은 이름이 정말 긴 배추 200g",
         imgSrc: "https://t1.daumcdn.net/cfile/tistory/2363B54A560BDA7605",
         price: "2800",
+      },
+      {
+        id: "204",
+        name: "이름이 기이이인 어디선가 온 친환경 배추 120g",
+        imgSrc: "https://img.hankyung.com/photo/202010/01.24087325.1.jpg",
+        price: "3000",
+      },
+      {
+        id: "205",
+        name: "이름이 기이이인 어디선가 온 친환경 배추 120g",
+        imgSrc: "https://img.hankyung.com/photo/202010/01.24087325.1.jpg",
+        price: "3000",
       },
     ],
   },

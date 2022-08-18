@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import fakeProductDB from "../FakeProductDB";
+import fakeProductDB from "../../FakeProductDB";
 //import { motion, AnimatePresence } from "framer-motion";
 
 /*const Wrapper = styled.div`
@@ -118,23 +118,25 @@ function Products() {
           <Slider>
             <SliderRow>
               {product.items.map((item) => (
-                <Box key={item.id}>
-                  <ProductImg>
-                    <img src={item.imgSrc} alt="사진" />
-                  </ProductImg>
-                  <InfoBox>
-                    <ProductName>
-                      <h3>{item.name}</h3>
-                    </ProductName>
-                    <ProductPrice>
-                      {item.price.replace(
-                        /\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g,
-                        ","
-                      )}{" "}
-                      원
-                    </ProductPrice>
-                  </InfoBox>
-                </Box>
+                <Link to={`/detail/${item.id}`}>
+                  <Box key={item.id}>
+                    <ProductImg>
+                      <img src={item.imgSrc} alt="사진" />
+                    </ProductImg>
+                    <InfoBox>
+                      <ProductName>
+                        <h3>{item.name}</h3>
+                      </ProductName>
+                      <ProductPrice>
+                        {item.price.replace(
+                          /\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g,
+                          ","
+                        )}{" "}
+                        원
+                      </ProductPrice>
+                    </InfoBox>
+                  </Box>
+                </Link>
               ))}
             </SliderRow>
           </Slider>

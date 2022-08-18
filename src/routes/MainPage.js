@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import BottomMenu from "../components/BottomMenu";
-import Navigator from "../components/Navigator";
-import Products from "../components/Products";
+import BottomMenu from "../components/global/BottomMenu";
+import Navigator from "../components/global/Navigator";
+import Products from "../components/mainPage/Products";
 
 const Wrapper = styled.div`
   overflow-y: scroll;
@@ -10,19 +10,19 @@ const Wrapper = styled.div`
   }
 `;
 
-const ProductBox = styled.div`
+const Board = styled.div`
   padding-top: 88px;
   padding-bottom: 45px;
-  height: 100vh;
+  height: 95vh;
 `;
 
 function MainPage() {
   return (
     <Wrapper>
       <Navigator />
-      <ProductBox>
+      <Board>
         <Products />
-      </ProductBox>
+      </Board>
       <BottomMenu />
     </Wrapper>
   );
