@@ -27,7 +27,23 @@ const fakeProductDB = [
         price: "2800",
       },
     ],
-    articles: [],
+    news: [
+      {
+        issueId: 1,
+        title:
+          "제목이 엄청 길어서 넘쳐 흐르는 기사 제목 기이이이이이이이이이이이이이이이이일다아아아아",
+        description: "내용입니다.1",
+        url: "https://www.naver.com",
+        pubDate: [2022, 8, 18, 19, 47, 3],
+      },
+      {
+        issueId: 2,
+        title: "제목입니다.2",
+        description: "내용입니다.2",
+        url: "https://www.naver.com",
+        pubDate: [2022, 8, 18, 19, 47, 3],
+      },
+    ],
   },
   {
     categoryId: "2",
@@ -65,6 +81,22 @@ const fakeProductDB = [
         name: "이름이 기이이인 어디선가 온 친환경 배추 120g",
         imgSrc: "https://img.hankyung.com/photo/202010/01.24087325.1.jpg",
         price: "3000",
+      },
+    ],
+    news: [
+      {
+        issueId: 1,
+        title: "제목입니다.1",
+        description: "내용입니다.1",
+        url: "https://www.naver.com",
+        pubDate: [2022, 8, 18, 19, 47, 3],
+      },
+      {
+        issueId: 2,
+        title: "제목입니다.2",
+        description: "내용입니다.2",
+        url: "https://www.naver.com",
+        pubDate: [2022, 8, 18, 19, 47, 3],
       },
     ],
   },

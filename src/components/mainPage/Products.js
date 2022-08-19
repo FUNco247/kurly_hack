@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import fakeProductDB from "../../FakeProductDB";
 //import { motion, AnimatePresence } from "framer-motion";
 
 /*const Wrapper = styled.div`
@@ -44,7 +43,7 @@ const Slider = styled.div`
 
 const SliderRow = styled.div`
   display: flex;
-  margin: 0px 0px 16px 16px;
+  margin: 0px 0px 8px 16px;
   gap: 8px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -67,6 +66,7 @@ const Box = styled.div`
 const ProductImg = styled.div`
   background-color: gray;
   min-width: 40vw;
+  max-width: 60vw;
   aspect-ratio: 1 / 1.301;
   overflow: hidden;
   img {
@@ -101,47 +101,40 @@ const ProductPrice = styled.div`
   padding-top: 8px;
 `;
 
-function Products() {
+function Products({ title, categoryId, subtitle, items }) {
   return (
     <>
-      {fakeProductDB.map((product) => (
-        <>
-          <CategoryName key={product.categoryId}>
-            <Link to={product.categoryId}>
-              <div>
-                <span>{product.title}</span>
-                <span>전체보기</span>
-              </div>
-              <div>{product.subtitle}</div>
+      <CategoryName>
+        <Link to={categoryId}>
+          <div>
+            <span>{title}</span>
+            <span>전체보기</span>
+          </div>
+          <div>{subtitle}</div>
+        </Link>
+      </CategoryName>
+      <Slider>
+        <SliderRow>
+          {items.map((item) => (
+            <Link to={`/detail/${item.id}`}>
+              <Box key={item.id}>
+                <ProductImg>
+                  <img src={item.imgSrc} alt="사진" />
+                </ProductImg>
+                <InfoBox>
+                  <ProductName>
+                    <h3>{item.name}</h3>
+                  </ProductName>
+                  <ProductPrice>
+                    {item.price.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}{" "}
+                    원
+                  </ProductPrice>
+                </InfoBox>
+              </Box>
             </Link>
-          </CategoryName>
-          <Slider>
-            <SliderRow>
-              {product.items.map((item) => (
-                <Link to={`/detail/${item.id}`}>
-                  <Box key={item.id}>
-                    <ProductImg>
-                      <img src={item.imgSrc} alt="사진" />
-                    </ProductImg>
-                    <InfoBox>
-                      <ProductName>
-                        <h3>{item.name}</h3>
-                      </ProductName>
-                      <ProductPrice>
-                        {item.price.replace(
-                          /\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g,
-                          ","
-                        )}{" "}
-                        원
-                      </ProductPrice>
-                    </InfoBox>
-                  </Box>
-                </Link>
-              ))}
-            </SliderRow>
-          </Slider>
-        </>
-      ))}
+          ))}
+        </SliderRow>
+      </Slider>
     </>
   );
 }
