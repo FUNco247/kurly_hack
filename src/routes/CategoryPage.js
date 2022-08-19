@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import Chart from "../components/CategoryPage/Chart";
 import BottomMenu from "../components/global/BottomMenu";
 import Navigator from "../components/global/Navigator";
+import fakePriceDB from "../FakePriceDB";
 
 const Wrapper = styled.div`
   overflow-y: scroll;
@@ -13,6 +15,9 @@ const Board = styled.div`
   padding-top: 88px;
   padding-bottom: 45px;
   height: 95vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 function DetailPage() {
@@ -20,7 +25,7 @@ function DetailPage() {
     <Wrapper>
       <Navigator />
       <Board>
-        <h1>제품군 전체보기 페이지 입니다</h1>
+        <Chart priceData={fakePriceDB} />
       </Board>
       <BottomMenu />
     </Wrapper>

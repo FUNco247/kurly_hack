@@ -38,7 +38,14 @@ const fakeProductDB = [
       },
       {
         issueId: 2,
-        title: "제목입니다.2",
+        title: "상추의 가격이 과연 오를지 까요?",
+        description: "내용입니다.2",
+        url: "https://www.naver.com",
+        pubDate: [2022, 8, 18, 19, 47, 3],
+      },
+      {
+        issueId: 3,
+        title: "더위가 풀려가는 것 같아 상추가 어떨지",
         description: "내용입니다.2",
         url: "https://www.naver.com",
         pubDate: [2022, 8, 18, 19, 47, 3],
