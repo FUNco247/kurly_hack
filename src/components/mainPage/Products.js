@@ -126,8 +126,7 @@ function Products({ title, categoryId, subtitle, items }) {
                     <h3>{item.name}</h3>
                   </ProductName>
                   <ProductPrice>
-                    {item.price.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}{" "}
-                    원
+                    {item.price.replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 원
                   </ProductPrice>
                 </InfoBox>
               </Box>

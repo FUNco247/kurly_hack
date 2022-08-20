@@ -1,0 +1,7 @@
+{
+  "name": "kurlybird",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
