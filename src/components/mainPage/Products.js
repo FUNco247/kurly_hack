@@ -116,8 +116,8 @@ function Products({ title, categoryId, subtitle, items }) {
       <Slider>
         <SliderRow>
           {items.map((item) => (
-            <Link to={`/detail/${item.id}`}>
-              <Box key={item.id}>
+            <Link to={`/detail/${item.id}`} key={item.id}>
+              <Box>
                 <ProductImg>
                   <img src={item.imgSrc} alt="사진" />
                 </ProductImg>

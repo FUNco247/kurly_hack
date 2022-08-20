@@ -29,26 +29,27 @@ const fakeProductDB = [
     ],
     news: [
       {
-        issueId: 1,
+        issueId: 11111,
         title:
-          "제목이 엄청 길어서 넘쳐 흐르는 기사 제목 기이이이이이이이이이이이이이이이이일다아아아아",
+          "제목이 엄청 길어서 넘쳐 흐르는 기사 제목 기이이이이이이이이이이이이이이이이일다아아아아 기이이이이이이이이이이이이이이이이일다아아아아 기이이이이이이이이이이이이이이이이일다아아아아",
         description: "내용입니다.1",
         url: "https://www.naver.com",
-        pubDate: [2022, 8, 18, 19, 47, 3],
+        pubDate: "2022-08-19T23:35:22",
       },
       {
-        issueId: 2,
-        title: "상추의 가격이 과연 오를지 까요?",
+        issueId: 22222,
+        title:
+          "상추의 가격이 과연 오를지 까요? 제목이 적당히 두 줄 제목이 적당히 두 줄 제목이 적당히 두 줄 제목이 적당히 두 줄",
         description: "내용입니다.2",
         url: "https://www.naver.com",
-        pubDate: [2022, 8, 18, 19, 47, 3],
+        pubDate: "2022-08-18T23:35:22",
       },
       {
-        issueId: 3,
+        issueId: 33333,
         title: "더위가 풀려가는 것 같아 상추가 어떨지",
         description: "내용입니다.2",
         url: "https://www.naver.com",
-        pubDate: [2022, 8, 18, 19, 47, 3],
+        pubDate: "2022-08-13T23:35:22",
       },
     ],
   },
@@ -92,18 +93,18 @@ const fakeProductDB = [
     ],
     news: [
       {
-        issueId: 1,
+        issueId: 44444,
         title: "제목입니다.1",
         description: "내용입니다.1",
         url: "https://www.naver.com",
-        pubDate: [2022, 8, 18, 19, 47, 3],
+        pubDate: "2022-08-19T23:35:22",
       },
       {
-        issueId: 2,
+        issueId: 55555,
         title: "제목입니다.2",
         description: "내용입니다.2",
         url: "https://www.naver.com",
-        pubDate: [2022, 8, 18, 19, 47, 3],
+        pubDate: "2022-08-15T23:35:22",
       },
     ],
   },

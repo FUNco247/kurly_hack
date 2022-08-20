@@ -18,22 +18,23 @@ const Board = styled.div`
   height: 95vh;
 `;
 
+const Box = styled.div``;
+
 function MainPage() {
   return (
     <Wrapper>
       <Navigator />
       <Board>
         {fakeProductDB.map((product) => (
-          <>
+          <Box key={product.categoryId}>
             <Products
-              key={product.categoryId}
               title={product.title}
               subtitle={product.subtitle}
               categoryId={product.categoryId}
               items={product.items}
             />
             <Articles articles={product.news} />
-          </>
+          </Box>
         ))}
       </Board>
       <BottomMenu />

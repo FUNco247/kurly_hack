@@ -35,7 +35,9 @@ function Chart({ priceData }) {
             enabled: false,
           },
           title: {
-            text: "undefined",
+            text: `${priceData.length}일 전보다 ${
+              priceData[priceData.length - 1].price - priceData[0].price
+            }원 올랐어요.`,
             align: "left",
             margin: 10,
             offsetX: 0,
@@ -49,7 +51,7 @@ function Chart({ priceData }) {
             },
           },
           subtitle: {
-            text: "Price Movements",
+            text: "농산물 유통정보 KAMIS",
             align: "left",
           },
           colors: ["#5f0080", "#d4c2dc", "#f7f7f7"],

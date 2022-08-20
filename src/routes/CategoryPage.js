@@ -25,7 +25,7 @@ function DetailPage() {
     <Wrapper>
       <Navigator />
       <Board>
-        <Chart priceData={fakePriceDB} />
+        <Chart priceData={fakePriceDB.priceData} />
       </Board>
       <BottomMenu />
     </Wrapper>
