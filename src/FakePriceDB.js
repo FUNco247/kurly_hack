@@ -1,5 +1,6 @@
 const fakePriceDB = {
-  priceData: [
+  priceStatisticsRes: [
+    { date: "08-04", price: 2000 },
     { date: "08-05", price: 2000 },
     { date: "08-06", price: 2100 },
     { date: "08-07", price: 2100 },

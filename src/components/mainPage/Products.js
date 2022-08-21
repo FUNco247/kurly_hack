@@ -113,17 +113,27 @@ function Products({ title, categoryId, subtitle, items }) {
       <Slider>
         <SliderRow>
           {items.map((item) => (
-            <Link to={`/detail/${item.id}`} key={item.id}>
+            <Link to={`/detail/${item.id}`} key={item.id + "unique"}>
               <Box>
                 <ProductImg>
-                  <img src={item.imgSrc} alt="사진" />
+                  <img
+                    src={
+                      item.imgSrc
+                        ? item.imgSrc
+                        : "https://t1.daumcdn.net/cfile/tistory/2363B54A560BDA7605"
+                    }
+                    alt="사진"
+                  />
                 </ProductImg>
                 <InfoBox>
                   <ProductName>
                     <h3>{item.name}</h3>
                   </ProductName>
                   <ProductPrice>
-                    {item.price.replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 원
+                    {item.price
+                      .toString()
+                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}{" "}
+                    원
                   </ProductPrice>
                 </InfoBox>
               </Box>

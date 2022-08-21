@@ -37,10 +37,10 @@ const BannerText = styled.div`
   }
 `;
 
-function Banner() {
+function Banner({ count }) {
   return (
-    <Wrapper>
-      <Link to={"/news"}>
+    <Link to={"/news"}>
+      <Wrapper>
         <BannerIMG
           src={
             "https://media.istockphoto.com/photos/mailbox-red-color-open-with-blank-street-number-label-blur-house-3d-picture-id1358837831?b=1&k=20&m=1358837831&s=170667a&w=0&h=zniHdFUsmrart43o3vgz9q7simInESqa0BXnH4zPVFI="
@@ -48,11 +48,11 @@ function Banner() {
         />
         <BannerText>
           <h1>컬리가 알려주는 식탁물가</h1>
-          <h1>0,000개 소식 분석중</h1>
+          <h1>{count}개 소식 분석중</h1>
           <h2>자세히 보기</h2>
         </BannerText>
-      </Link>
-    </Wrapper>
+      </Wrapper>
+    </Link>
   );
 }
 

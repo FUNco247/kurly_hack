@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  margin: 16px;
+  margin: 8px 16px 0px 16px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -15,6 +15,8 @@ const Article = styled.a`
   width: 100%;
   padding-bottom: 8px;
   margin-top: 8px;
+  display: grid;
+  grid-template-columns: 9fr 1fr;
 `;
 
 const Title = styled.div`
@@ -23,8 +25,9 @@ const Title = styled.div`
   line-height: 1-0.273c2;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+  padding-right: 10%;
 `;
 const DateDiff = styled.div`
   color: #999999;
@@ -43,14 +46,20 @@ function Articles({ articles }) {
   const currentDate = new Date().toISOString().slice(0, 10); //"2022-08-21"
   return (
     <Wrapper>
-      {articles.map((article) => (
-        <Article target={"_blank"} href={article.url} key={article.issueId}>
-          <Title>{article.title}</Title>
-          <DateDiff>
-            {getDateDiff(currentDate, article.pubDate.split("T")[0])}일전
-          </DateDiff>
-        </Article>
-      ))}
+      {articles
+        ? articles.map((article) => (
+            <Article
+              target={"_blank"}
+              href={article.url}
+              key={article.issueId + 19847235}
+            >
+              <Title>{article.title}</Title>
+              <DateDiff>
+                {getDateDiff(currentDate, article.pubDate.split("T")[0])}일전
+              </DateDiff>
+            </Article>
+          ))
+        : null}
     </Wrapper>
   );
 }

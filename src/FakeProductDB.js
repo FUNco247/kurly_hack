@@ -4,7 +4,7 @@ const fakeProductDB = [
     categoryName: "상추",
     title: "지금 사면 좋은 상추",
     subtitle: "상추 가격이 오를것 같아요",
-    items: [
+    products: [
       {
         id: "101",
         name: "이름이 기이이인 어디선가 온 친환경 상추 120g",
@@ -52,13 +52,120 @@ const fakeProductDB = [
         pubDate: "2022-08-13T23:35:22",
       },
     ],
+    priceStatisticsRes: [
+      {
+        price: 61500,
+        categoryId: 1,
+        date: "2022-07-21",
+      },
+      {
+        price: 58500,
+        categoryId: 1,
+        date: "2022-07-22",
+      },
+      {
+        price: 66200,
+        categoryId: 1,
+        date: "2022-07-25",
+      },
+      {
+        price: 43000,
+        categoryId: 1,
+        date: "2022-07-26",
+      },
+      {
+        price: 38200,
+        categoryId: 1,
+        date: "2022-07-27",
+      },
+      {
+        price: 42000,
+        categoryId: 1,
+        date: "2022-07-28",
+      },
+      {
+        price: 44000,
+        categoryId: 1,
+        date: "2022-07-29",
+      },
+      {
+        price: 41200,
+        categoryId: 1,
+        date: "2022-08-01",
+      },
+      {
+        price: 39500,
+        categoryId: 1,
+        date: "2022-08-02",
+      },
+      {
+        price: 43500,
+        categoryId: 1,
+        date: "2022-08-03",
+      },
+      {
+        price: 51500,
+        categoryId: 1,
+        date: "2022-08-04",
+      },
+      {
+        price: 58700,
+        categoryId: 1,
+        date: "2022-08-05",
+      },
+      {
+        price: 42500,
+        categoryId: 1,
+        date: "2022-08-08",
+      },
+      {
+        price: 57500,
+        categoryId: 1,
+        date: "2022-08-09",
+      },
+      {
+        price: 77000,
+        categoryId: 1,
+        date: "2022-08-10",
+      },
+      {
+        price: 67000,
+        categoryId: 1,
+        date: "2022-08-11",
+      },
+      {
+        price: 62000,
+        categoryId: 1,
+        date: "2022-08-12",
+      },
+      {
+        price: 110000,
+        categoryId: 1,
+        date: "2022-08-16",
+      },
+      {
+        price: 103000,
+        categoryId: 1,
+        date: "2022-08-17",
+      },
+      {
+        price: 102000,
+        categoryId: 1,
+        date: "2022-08-18",
+      },
+      {
+        price: 80000,
+        categoryId: 1,
+        date: "2022-08-19",
+      },
+    ],
   },
   {
     categoryId: "2",
     categoryName: "배추",
     title: "지금 사면 좋은 배추",
     subtitle: "배추 가격이 오를것 같아요",
-    items: [
+    products: [
       {
         id: "201",
         name: "이름이 기이이인 어디선가 온 친환경 배추 120g",
@@ -105,6 +212,113 @@ const fakeProductDB = [
         description: "내용입니다.2",
         url: "https://www.naver.com",
         pubDate: "2022-08-15T23:35:22",
+      },
+    ],
+    priceStatisticsRes: [
+      {
+        price: 6100,
+        categoryId: 2,
+        date: "2022-07-21",
+      },
+      {
+        price: 5900,
+        categoryId: 2,
+        date: "2022-07-22",
+      },
+      {
+        price: 6200,
+        categoryId: 2,
+        date: "2022-07-25",
+      },
+      {
+        price: 4100,
+        categoryId: 2,
+        date: "2022-07-26",
+      },
+      {
+        price: 3250,
+        categoryId: 2,
+        date: "2022-07-27",
+      },
+      {
+        price: 4200,
+        categoryId: 2,
+        date: "2022-07-28",
+      },
+      {
+        price: 4400,
+        categoryId: 2,
+        date: "2022-07-29",
+      },
+      {
+        price: 4180,
+        categoryId: 2,
+        date: "2022-08-01",
+      },
+      {
+        price: 4050,
+        categoryId: 2,
+        date: "2022-08-02",
+      },
+      {
+        price: 4250,
+        categoryId: 2,
+        date: "2022-08-03",
+      },
+      {
+        price: 5050,
+        categoryId: 2,
+        date: "2022-08-04",
+      },
+      {
+        price: 5570,
+        categoryId: 2,
+        date: "2022-08-05",
+      },
+      {
+        price: 4250,
+        categoryId: 2,
+        date: "2022-08-08",
+      },
+      {
+        price: 5750,
+        categoryId: 2,
+        date: "2022-08-09",
+      },
+      {
+        price: 7700,
+        categoryId: 2,
+        date: "2022-08-10",
+      },
+      {
+        price: 6800,
+        categoryId: 2,
+        date: "2022-08-11",
+      },
+      {
+        price: 6700,
+        categoryId: 2,
+        date: "2022-08-12",
+      },
+      {
+        price: 9000,
+        categoryId: 2,
+        date: "2022-08-16",
+      },
+      {
+        price: 9300,
+        categoryId: 2,
+        date: "2022-08-17",
+      },
+      {
+        price: 9200,
+        categoryId: 2,
+        date: "2022-08-18",
+      },
+      {
+        price: 9000,
+        categoryId: 2,
+        date: "2022-08-19",
       },
     ],
   },

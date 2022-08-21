@@ -9,9 +9,9 @@ function Router() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainPage />} />
+        <Route path="/news" element={<NewsPage />} />
         <Route path="/detail/:productId" element={<DetailPage />} />
         <Route path="/:categoryId" element={<CategoryPage />} />
-        <Route path="/news" element={<NewsPage />} />
       </Routes>
     </BrowserRouter>
   );

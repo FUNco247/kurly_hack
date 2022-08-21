@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import BottomMenu from "../components/global/BottomMenu";
-import Navigator from "../components/global/Navigator";
+import NewsBoard from "../components/Articles/NewsBoard";
+import WhiteNavigator from "../components/global/WhiteNavigator";
+import { useQuery } from "react-query";
+import { getAllArticles } from "../api";
 
 const Wrapper = styled.div`
   overflow-y: scroll;
@@ -16,12 +19,11 @@ const Board = styled.div`
 `;
 
 function NewsPage() {
+  const { isLoading, data } = useQuery("allItems", getAllArticles);
   return (
     <Wrapper>
-      <Navigator />
-      <Board>
-        <h1>뉴스 페이지 입니다</h1>
-      </Board>
+      <WhiteNavigator />
+      <Board>{isLoading ? null : <NewsBoard articles={data.content} />}</Board>
       <BottomMenu />
     </Wrapper>
   );

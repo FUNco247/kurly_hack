@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Chart from "../components/CategoryPage/Chart";
+import Chart from "../components/CategoryPage/LineChart";
 import BottomMenu from "../components/global/BottomMenu";
 import Navigator from "../components/global/Navigator";
 import fakePriceDB from "../FakePriceDB";
@@ -25,7 +25,7 @@ function DetailPage() {
     <Wrapper>
       <Navigator />
       <Board>
-        <Chart priceData={fakePriceDB.priceData} />
+        <Chart priceData={fakePriceDB.priceStatisticsRes} />
       </Board>
       <BottomMenu />
     </Wrapper>

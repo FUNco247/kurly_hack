@@ -13,7 +13,7 @@ function Chart({ priceData }) {
         type="area"
         series={[
           {
-            name: "Price",
+            name: "가격",
             data: priceData.map((e) => parseInt(e.price)),
           },
         ]}
