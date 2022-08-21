@@ -1,17 +1,12 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-//import { motion, AnimatePresence } from "framer-motion";
-
-/*const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-`;*/
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 const CategoryName = styled.div`
   position: relative;
   display: block;
-  padding: 16px;
+  padding: 16px 16px 16px 16px;
   div {
     font-size: 14px;
     font-weight: 400;
@@ -108,7 +103,9 @@ function Products({ title, categoryId, subtitle, items }) {
         <Link to={categoryId}>
           <div>
             <span>{title}</span>
-            <span>전체보기</span>
+            <span>
+              전체보기 <FontAwesomeIcon icon={faAngleRight} />
+            </span>
           </div>
           <div>{subtitle}</div>
         </Link>

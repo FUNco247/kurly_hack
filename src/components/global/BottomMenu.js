@@ -6,6 +6,7 @@ import {
   faMagnifyingGlass,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const MenuBox = styled.div`
   position: fixed;
@@ -36,7 +37,9 @@ function BottomMenu() {
   return (
     <MenuBox>
       <Menu>
-        <FontAwesomeIcon icon={faHouse} size="lg" />
+        <Link to={"/"}>
+          <FontAwesomeIcon icon={faHouse} size="lg" />
+        </Link>
       </Menu>
       <Menu>
         <FontAwesomeIcon icon={faBars} size="lg" />

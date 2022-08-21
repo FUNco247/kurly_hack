@@ -4,6 +4,7 @@ import Navigator from "../components/global/Navigator";
 import Products from "../components/mainPage/Products";
 import Articles from "../components/mainPage/Articles";
 import fakeProductDB from "../FakeProductDB";
+import Banner from "../components/mainPage/Banner";
 
 const Wrapper = styled.div`
   overflow-y: scroll;
@@ -25,6 +26,7 @@ function MainPage() {
     <Wrapper>
       <Navigator />
       <Board>
+        <Banner />
         {fakeProductDB.map((product) => (
           <Box key={product.categoryId}>
             <Products
