@@ -9,5 +9,6 @@ export async function getAllArticles() {
     `http://3.34.2.197:8080/news?paged=false&pageSize=1000&sort.sorted=false&unpaged=true`
   );
   const json = await response.json();
+  console.log(json);
   return json;
 }

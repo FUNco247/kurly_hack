@@ -19,11 +19,14 @@ const Board = styled.div`
 `;
 
 function NewsPage() {
-  const { isLoading, data } = useQuery("allItems", getAllArticles);
+  const { isLoading, data } = useQuery("allArticles", getAllArticles);
+  console.log(isLoading, data);
   return (
     <Wrapper>
       <WhiteNavigator />
-      <Board>{isLoading ? null : <NewsBoard articles={data.content} />}</Board>
+      <Board>
+        {isLoading ? <h1>로딩중</h1> : <NewsBoard articles={data} />}
+      </Board>
       <BottomMenu />
     </Wrapper>
   );

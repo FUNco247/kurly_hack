@@ -51,7 +51,7 @@ const setPriceforBarChart = (data) => {
 
 function MainPage() {
   const { isLoading, data } = useQuery("allItems", getAllItems);
-  //console.log(isLoading, data);
+  console.log(isLoading, data);
   return (
     <Wrapper>
       <Navigator />
