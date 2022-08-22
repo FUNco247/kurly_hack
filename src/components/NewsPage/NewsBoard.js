@@ -5,7 +5,7 @@ const Wrapper = styled.div`
 `;
 
 const Article = styled.a`
-  max-height: 84px;
+  max-height: 86px;
   border-bottom: 0.5px solid #999999;
   width: 100%;
   padding: 0px 8px 8px 8px;

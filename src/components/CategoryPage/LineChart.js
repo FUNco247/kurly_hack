@@ -1,28 +1,46 @@
+import { filterProps } from "framer-motion";
 import ApexChart from "react-apexcharts";
 import styled from "styled-components";
 
 const ChartWrapper = styled.div`
+  margin-top: 32px;
   display: block;
   width: calc(100vw - 32px);
 `;
 
-function Chart({ priceData }) {
+const DataOrigin = styled.div`
+  font-size: 12px;
+  font-weight: 400;
+  color: #999999;
+  float: right;
+  padding: 0;
+  margin: 0;
+`;
+
+function LineChart({ priceData }) {
+  //console.log(priceData);
+  let sortData = [];
+  for (let i = 0; i < priceData.length; i++) {
+    const data = { x: priceData[i].date.slice(5), y: priceData[i].price };
+    sortData.push(data);
+  }
   return (
     <ChartWrapper>
       <ApexChart
-        type="area"
+        type="line"
         series={[
           {
             name: "가격",
-            data: priceData.map((e) => parseInt(e.price)),
+            data: sortData,
           },
         ]}
         options={{
+          markers: { size: 4 },
           theme: {
             mode: "light",
           },
           chart: {
-            width: 400,
+            width: 500,
             height: 300,
             stroke: {
               curve: "smooth",
@@ -35,24 +53,36 @@ function Chart({ priceData }) {
             enabled: false,
           },
           title: {
-            text: `${priceData.length}일 전보다 ${
-              priceData[priceData.length - 1].price - priceData[0].price
-            }원 올랐어요.`,
+            text: `일 평균 ${(
+              ((priceData[priceData.length - 1].price - priceData[0].price) *
+                100) /
+              (priceData[0].price * priceData.length)
+            ).toFixed(0)}% 상숭중이에요`,
             align: "left",
             margin: 10,
             offsetX: 0,
             offsetY: 0,
             floating: false,
             style: {
-              fontSize: "14px",
-              fontWeight: "bold",
+              fontSize: "18px",
+              fontWeight: "500",
               fontFamily: undefined,
-              color: "#263238",
+              color: "#333333",
             },
           },
           subtitle: {
-            text: "농산물 유통정보 KAMIS",
+            text: `2주 전보다 ${(
+              priceData[priceData.length - 1].price - priceData[0].price
+            )
+              .toString()
+              .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원 올랐어요.`,
             align: "left",
+            style: {
+              fontSize: "14px",
+              fontWeight: "400",
+              fontFamily: undefined,
+              color: "#999999",
+            },
           },
           colors: ["#5f0080", "#d4c2dc", "#f7f7f7"],
           fill: {
@@ -67,7 +97,7 @@ function Chart({ priceData }) {
               show: true,
               color: "#78909C",
               height: 1,
-              width: "120%",
+              width: "116%",
               offsetX: 0,
               offsetY: 3,
             },
@@ -82,10 +112,12 @@ function Chart({ priceData }) {
               },
             },
             categories: priceData.map((e) => e.date),
-            tickAmount: 7,
+            tickAmount: 4,
           },
           yaxis: {
             opposite: true,
+            axisTicks: { show: false },
+            tickAmount: 4,
             show: true,
             labels: {
               show: true,
@@ -103,7 +135,7 @@ function Chart({ priceData }) {
           tooltip: {
             x: {
               show: true,
-              format: "dd MMM",
+              format: "DDD MM",
             },
             y: {
               formatter: (value) => `
@@ -113,8 +145,9 @@ function Chart({ priceData }) {
           },
         }}
       />
+      <DataOrigin>KAMIS 농산물 유통 정보 · 천 원</DataOrigin>
     </ChartWrapper>
   );
 }
 
-export default Chart;
+export default LineChart;

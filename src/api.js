@@ -17,7 +17,9 @@ export async function getAllArticles(pageParam) {
 }
 
 export async function getCategory(categoryId) {
-  const response = await fetch("http://3.34.2.197:8080/kurly-bird");
+  const response = await fetch(
+    `http://3.34.2.197:8080/kurly-bird/${categoryId}`
+  );
   const json = await response.json();
   return json;
 }

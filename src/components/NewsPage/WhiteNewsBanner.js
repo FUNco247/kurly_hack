@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faCartPlus } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = styled.div`
   position: fixed;
@@ -14,7 +14,7 @@ const Header = styled.div`
   padding-bottom: constant(safe-area-inset-top, 25px);
   padding-top: env(safe-area-inset-top, 40px);
   padding-bottom: env(safe-area-inset-top, 25px);
-  height: 88px;
+  height: 46px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 2fr;
@@ -61,16 +61,15 @@ const LocationAndCart = styled.div`
   }
 `;
 
-function WhiteNavigator() {
+function WhiteNewsBanner() {
+  const navigate = useNavigate();
   return (
     <>
       <Header>
         <HeaderMain>
-          <Link to={`/`}>
-            <GoBackBtn>
-              <FontAwesomeIcon icon={faAngleLeft} size="lg" />
-            </GoBackBtn>
-          </Link>
+          <GoBackBtn onClick={() => navigate(-1)}>
+            <FontAwesomeIcon icon={faAngleLeft} size="lg" />
+          </GoBackBtn>
           <SelectMarketBtn>컬리버드 소식</SelectMarketBtn>
           <LocationAndCart>
             <FontAwesomeIcon icon={faCartPlus} size="lg" />
@@ -80,4 +79,4 @@ function WhiteNavigator() {
     </>
   );
 }
-export default WhiteNavigator;
+export default WhiteNewsBanner;

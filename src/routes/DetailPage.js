@@ -1,3 +1,5 @@
+//import { useQuery } from "react-query";
+//import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import BottomMenu from "../components/global/BottomMenu";
 import Navigator from "../components/global/Navigator";
@@ -16,7 +18,6 @@ const Board = styled.div`
 `;
 
 function DetailPage() {
-  
   return (
     <Wrapper>
       <Navigator />

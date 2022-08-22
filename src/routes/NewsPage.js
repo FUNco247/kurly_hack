@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import BottomMenu from "../components/global/BottomMenu";
-import NewsBoard from "../components/Articles/NewsBoard";
-import WhiteNavigator from "../components/Articles/WhiteNavigator";
+import NewsBoard from "../components/NewsPage/NewsBoard";
+import WhiteNewsBanner from "../components/NewsPage/WhiteNewsBanner";
 import { useInfiniteQuery } from "react-query";
 import { useInView } from "react-intersection-observer";
 import { getAllArticles } from "../api";
@@ -15,9 +14,9 @@ const Wrapper = styled.div`
 `;
 
 const Board = styled.div`
-  padding-top: 88px;
+  padding-top: 46px;
   padding-bottom: 45px;
-  height: 85vh;
+  height: 100vh;
 `;
 
 function NewsPage() {
@@ -50,13 +49,11 @@ function NewsPage() {
     }
   }, [inView]);
 
-  return status === "loading" ? (
-    <p>Loading...</p>
-  ) : status === "error" ? (
+  return status === "loading" ? null : status === "error" ? (
     <p>Error: {error.message}</p>
   ) : (
     <Wrapper>
-      <WhiteNavigator />
+      <WhiteNewsBanner />
       <Board>
         {data.pages.map((page, index) => (
           <NewsBoard articles={page.content} key={index} />
@@ -74,7 +71,6 @@ function NewsPage() {
             : "Nothing more to load"}
         </button>
       </Board>
-      <BottomMenu />
     </Wrapper>
   );
 }

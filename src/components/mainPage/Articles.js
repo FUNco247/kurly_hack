@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  margin: 8px 16px 0px 16px;
+  margin: 8px 0px 0px 0px;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -13,7 +14,7 @@ const Wrapper = styled.div`
 const Article = styled.a`
   border-bottom: 0.5px solid #999999;
   width: 100%;
-  padding-bottom: 8px;
+  padding: 0px 16px 8px 16px;
   margin-top: 8px;
   display: grid;
   grid-template-columns: 9fr 1fr;

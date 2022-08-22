@@ -5,7 +5,6 @@ import BottomMenu from "../components/global/BottomMenu";
 import Navigator from "../components/global/Navigator";
 import Products from "../components/mainPage/Products";
 import Articles from "../components/mainPage/Articles";
-//import fakeProductDB from "../FakeProductDB";
 import Banner from "../components/mainPage/Banner";
 import BarChart from "../components/mainPage/BarChart";
 
@@ -51,7 +50,7 @@ const setPriceforBarChart = (data) => {
 
 function MainPage() {
   const { isLoading, data } = useQuery("allItems", getAllItems);
-  console.log(isLoading, data);
+  //console.log(isLoading, data);
   return (
     <Wrapper>
       <Navigator />
