@@ -100,7 +100,7 @@ function Products({ title, categoryId, subtitle, items }) {
   return (
     <>
       <CategoryName>
-        <Link to={categoryId}>
+        <Link to={`/category/${categoryId}`}>
           <div>
             <span>{title}</span>
             <span>
@@ -113,13 +113,13 @@ function Products({ title, categoryId, subtitle, items }) {
       <Slider>
         <SliderRow>
           {items.map((item) => (
-            <Link to={`/detail/${item.id}`} key={item.id + "unique"}>
+            <Link to={`/product/${item.id}`} key={item.id + "unique"}>
               <Box>
                 <ProductImg>
                   <img
                     src={
-                      item.imgSrc
-                        ? item.imgSrc
+                      item.fileName
+                        ? `http://3.34.2.197:8080/${item.fileName}`
                         : "https://t1.daumcdn.net/cfile/tistory/2363B54A560BDA7605"
                     }
                     alt="사진"

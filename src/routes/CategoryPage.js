@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import { getCategory } from "../api";
+import { useQuery } from "react-query";
+import { useParams } from "react-router-dom";
 import Chart from "../components/CategoryPage/LineChart";
 import BottomMenu from "../components/global/BottomMenu";
 import Navigator from "../components/global/Navigator";
@@ -21,6 +24,11 @@ const Board = styled.div`
 `;
 
 function DetailPage() {
+  const { categoryId } = useParams();
+  const { isLoading, data } = useQuery(["coinData", categoryId], () =>
+    getCategory(categoryId)
+  );
+  console.log(isLoading, data);
   return (
     <Wrapper>
       <Navigator />

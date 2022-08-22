@@ -50,10 +50,10 @@ const getDateDiff = (a, b) => {
 
 function NewsBoard({ articles }) {
   const currentDate = new Date().toISOString().slice(0, 10);
-  console.log(articles);
+  //console.log(articles);
   return (
     <Wrapper>
-      {articles.content.map((article) => (
+      {articles.map((article) => (
         <Article target={"_blank"} href={article.url} key={article.id + "news"}>
           <Title>{article.title}</Title>
           <DateDiff>

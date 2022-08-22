@@ -16,6 +16,7 @@ const Board = styled.div`
 `;
 
 function DetailPage() {
+  
   return (
     <Wrapper>
       <Navigator />

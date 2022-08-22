@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import BottomMenu from "../components/global/BottomMenu";
 import NewsBoard from "../components/Articles/NewsBoard";
-import WhiteNavigator from "../components/global/WhiteNavigator";
-import { useQuery } from "react-query";
+import WhiteNavigator from "../components/Articles/WhiteNavigator";
+import { useInfiniteQuery } from "react-query";
+import { useInView } from "react-intersection-observer";
 import { getAllArticles } from "../api";
+import { useEffect } from "react";
 
 const Wrapper = styled.div`
   overflow-y: scroll;
@@ -15,17 +17,62 @@ const Wrapper = styled.div`
 const Board = styled.div`
   padding-top: 88px;
   padding-bottom: 45px;
-  height: 95vh;
+  height: 85vh;
 `;
 
 function NewsPage() {
-  const { isLoading, data } = useQuery("allArticles", getAllArticles);
-  console.log(isLoading, data);
-  return (
+  const { ref, inView } = useInView();
+  const {
+    data,
+    error,
+    fetchNextPage,
+    hasNextPage,
+    isFetchingNextPage,
+    status,
+  } = useInfiniteQuery(
+    ["allArticles"],
+    ({ pageParam = 1 }) => getAllArticles(pageParam),
+    {
+      getNextPageParam: (lastPage) => {
+        if (!lastPage.isLast) {
+          return lastPage.nextPage;
+        } else {
+          return undefined;
+        }
+      },
+      getPreviousPageParam: (firstPage) => firstPage.prevCursor,
+    }
+  );
+
+  useEffect(() => {
+    if (inView) {
+      fetchNextPage();
+    }
+  }, [inView]);
+
+  return status === "loading" ? (
+    <p>Loading...</p>
+  ) : status === "error" ? (
+    <p>Error: {error.message}</p>
+  ) : (
     <Wrapper>
       <WhiteNavigator />
       <Board>
-        {isLoading ? <h1>로딩중</h1> : <NewsBoard articles={data} />}
+        {data.pages.map((page, index) => (
+          <NewsBoard articles={page.content} key={index} />
+        ))}
+        <button
+          style={{ border: "none", backgroundColor: "white", color: "white" }}
+          ref={ref}
+          onClick={() => fetchNextPage()}
+          disabled={!hasNextPage || isFetchingNextPage}
+        >
+          {isFetchingNextPage
+            ? "Loading more..."
+            : hasNextPage
+            ? "Load Newer"
+            : "Nothing more to load"}
+        </button>
       </Board>
       <BottomMenu />
     </Wrapper>
