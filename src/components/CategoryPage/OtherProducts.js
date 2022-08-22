@@ -53,7 +53,7 @@ function OtherProdunts({ products }) {
   return (
     <Wrapper>
       {products.map((product) => (
-        <Link to={`/detail/${product.id}`} key={product.id}>
+        <Link to={`/product/${product.id}`} key={product.id}>
           <ProductBox>
             <ProductImg>
               <img
