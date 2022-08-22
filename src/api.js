@@ -23,3 +23,9 @@ export async function getCategory(categoryId) {
   const json = await response.json();
   return json;
 }
+
+export async function getDetail(productId) {
+  const response = await fetch(`http://3.34.2.197:8080/product/${productId}`);
+  const json = await response.json();
+  return json;
+}

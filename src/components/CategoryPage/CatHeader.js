@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft, faCartPlus } from "@fortawesome/free-solid-svg-icons";
+import { faAngleLeft, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
 const Header = styled.div`
@@ -45,9 +45,9 @@ const SelectMarketBtn = styled.div`
   align-items: center;
   min-height: 28px;
   min-width: 71px;
-  color: black;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
   padding: 0px 10px 0px 13px;
   border-radius: 15px;
 `;
@@ -117,7 +117,7 @@ function CatHeader({ categories }) {
 
           <SelectMarketBtn>컬리버드</SelectMarketBtn>
           <LocationAndCart>
-            <FontAwesomeIcon icon={faCartPlus} size="lg" />
+            <FontAwesomeIcon icon={faShoppingCart} size="xl" />
           </LocationAndCart>
         </HeaderMain>
         <Slider>

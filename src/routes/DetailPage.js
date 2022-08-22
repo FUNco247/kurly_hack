@@ -1,8 +1,8 @@
-//import { useQuery } from "react-query";
-//import { useParams } from "react-router-dom";
 import styled from "styled-components";
-import BottomMenu from "../components/global/BottomMenu";
-import Navigator from "../components/global/Navigator";
+import { useQuery } from "react-query";
+import { useParams } from "react-router-dom";
+import { getDetail } from "../api";
+import DetailHeader from "../components/DetailPage/DetailHeader";
 
 const Wrapper = styled.div`
   overflow-y: scroll;
@@ -18,13 +18,17 @@ const Board = styled.div`
 `;
 
 function DetailPage() {
+  const { productId } = useParams();
+  const { isLoading, data } = useQuery([`product${productId}`, productId], () =>
+    getDetail(productId)
+  );
+  //console.log(isLoading, data);
   return (
     <Wrapper>
-      <Navigator />
+      {isLoading ? null : <DetailHeader productName={data.name} />}
       <Board>
         <h1>상세 페이지 입니다</h1>
       </Board>
-      <BottomMenu />
     </Wrapper>
   );
 }

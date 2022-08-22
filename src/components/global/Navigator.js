@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationDot, faCartPlus } from "@fortawesome/free-solid-svg-icons";
+import {
+  faLocationDot,
+  faShoppingCart,
+} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 const Header = styled.div`
@@ -113,8 +116,8 @@ function Navigator() {
           </Link>
           <SelectMarketBtn>마켓컬리</SelectMarketBtn>
           <LocationAndCart>
-            <FontAwesomeIcon icon={faLocationDot} size="lg" />
-            <FontAwesomeIcon icon={faCartPlus} size="lg" />
+            <FontAwesomeIcon icon={faLocationDot} size="xl" />
+            <FontAwesomeIcon icon={faShoppingCart} size="xl" />
           </LocationAndCart>
         </HeaderMain>
         <HeaderMenu>
