@@ -78,7 +78,7 @@ function DetailHeader({ productName }) {
           </GoBackBtn>
           <SelectMarketBtn>{productName}</SelectMarketBtn>
           <LocationAndCart>
-            <FontAwesomeIcon icon={faCartShopping} size="lg" />
+            <FontAwesomeIcon icon={faCartShopping} size="xl" />
           </LocationAndCart>
         </HeaderMain>
       </Header>
