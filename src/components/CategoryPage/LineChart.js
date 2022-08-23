@@ -35,7 +35,7 @@ function LineChart({ priceData }) {
           },
         ]}
         options={{
-          markers: { size: 4 },
+          markers: { size: 3 },
           theme: {
             mode: "light",
           },
@@ -43,7 +43,12 @@ function LineChart({ priceData }) {
             width: 500,
             height: 300,
             stroke: {
+              show: true,
               curve: "smooth",
+              lineCap: "butt",
+              colors: undefined,
+              width: 2,
+              dashArray: 0,
             },
             background: undefined,
             foreColor: "#999999",
@@ -57,7 +62,7 @@ function LineChart({ priceData }) {
               ((priceData[priceData.length - 1].price - priceData[0].price) *
                 100) /
               (priceData[0].price * priceData.length)
-            ).toFixed(0)}% 상숭중이에요`,
+            ).toFixed(0)}% 상승중이에요`,
             align: "left",
             margin: 10,
             offsetX: 0,

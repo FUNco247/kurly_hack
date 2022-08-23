@@ -4,7 +4,7 @@ import styled from "styled-components";
 const ChartWrapper = styled.div`
   display: block;
   width: calc(100vw - 32px);
-  margin-top: 8px;
+  margin-top: 32px;
 `;
 
 function BarChart({ priceData }) {

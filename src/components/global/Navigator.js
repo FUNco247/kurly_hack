@@ -77,6 +77,7 @@ const HeaderMenu = styled.div`
       color: #5f0080;
       border-bottom: solid 2px #5f0080;
       margin-right: 16px;
+      margin-left: 0;
     }
   }
 `;

@@ -76,7 +76,7 @@ const Slider = styled.div`
 const HeaderMenu = styled.div`
   display: flex;
   margin: 0px 0px 8px 16px;
-  gap: 8px;
+  gap: 0px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   ::-webkit-scrollbar {
@@ -88,7 +88,7 @@ const MenuBox = styled.button`
   border: none;
   background-color: white;
   position: relative;
-  min-width: calc(17vw + 13px);
+  min-width: calc(15vw + 17px);
   height: 41px;
   justify-content: space-between;
   scroll-snap-align: start;

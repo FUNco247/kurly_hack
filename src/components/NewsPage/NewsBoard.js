@@ -6,33 +6,38 @@ const Wrapper = styled.div`
 
 const Article = styled.a`
   max-height: 86px;
-  border-bottom: 0.5px solid #999999;
+  border-bottom: 0.5px solid #dedede;
   width: 100vw;
   display: grid;
   grid-template-columns: 9fr 1fr;
   grid-template-rows: 34px 50px;
   #Wrap {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     grid-column: span 2;
+  }
+  #title {
+    display: flex;
+    align-items: center;
   }
 `;
 
 const Title = styled.div`
-  display: flex;
-  align-items: flex-end;
+  display: block;
   font-size: 14px;
   font-weight: 500;
   color: #333333;
   overflow: hidden;
-  text-overflow: ellipsis;
-  padding: 0 10% 0 16px;
+  padding-left: 16px;
+  max-width: 80vw;
   white-space: nowrap;
+  text-overflow: ellipsis;
 `;
 const DateDiff = styled.div`
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-items: flex-end;
   color: #999999;
   font-size: 13px;
   font-weight: 400;
@@ -43,10 +48,9 @@ const Description = styled.div`
   font-weight: 400;
   overflow: hidden;
   display: -webkit-box;
+  line-height: 18px;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  -webkit-box-align: center;
-  height: 2em;
   color: #666666;
   padding: 0 16px;
 `;
@@ -65,9 +69,16 @@ function NewsBoard({ articles }) {
     <Wrapper>
       {articles.map((article) => (
         <Article target={"_blank"} href={article.url} key={article.id + "news"}>
-          <Title>{article.title}</Title>
+          <div id="title">
+            <Title>{article.title}</Title>
+          </div>
           <DateDiff>
-            {getDateDiff(currentDate, article.pubDate.split("T")[0])}일전
+            {getDateDiff(currentDate, article.pubDate.split("T")[0]) == 0
+              ? "오늘"
+              : `${getDateDiff(
+                  currentDate,
+                  article.pubDate.split("T")[0]
+                )}일전`}
           </DateDiff>
           <div id="Wrap">
             <Description>{article.description}</Description>
