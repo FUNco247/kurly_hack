@@ -7,7 +7,7 @@ import CatHeader from "../components/CategoryPage/CatHeader";
 import LineChart from "../components/CategoryPage/LineChart";
 import Articles from "../components/mainPage/Articles";
 import OtherProdunts from "../components/CategoryPage/OtherProducts";
-import SubscribeBtn from "../components/CategoryPage/SubscribeBtn";
+import ModalButton from "../components/CategoryPage/Modal";
 
 const Wrapper = styled.div`
   overflow-y: scroll;
@@ -69,6 +69,7 @@ function CategoryPage() {
     <Wrapper>
       {allCatLoading ? null : <CatHeader categories={categories} />}
       <Board>
+        <ModalButton />
         {categoryLoading ? null : (
           <>
             <LineChart priceData={categoryData.priceStatisticsRes} />
@@ -82,7 +83,7 @@ function CategoryPage() {
           <OtherProdunts products={categoryData.products} />
         )}
       </Board>
-      <SubscribeBtn />
+
       <BottomMenu />
     </Wrapper>
   );

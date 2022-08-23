@@ -1,11 +1,7 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faAngleLeft,
-  faCartPlus,
-  faCartShopping,
-} from "@fortawesome/free-solid-svg-icons";
-import { useNavigate, useParams } from "react-router-dom";
+import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 const Header = styled.div`
   position: fixed;
@@ -40,6 +36,9 @@ const GoBackBtn = styled.div`
   height: 30px;
   font-size: 18px;
   color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const SelectMarketBtn = styled.div`
@@ -96,7 +95,6 @@ const Menu = styled.div`
 `;
 
 function DetailHeader({ productName }) {
-  const param = useParams();
   const navigate = useNavigate();
   return (
     <>
@@ -107,7 +105,44 @@ function DetailHeader({ productName }) {
           </GoBackBtn>
           <SelectMarketBtn>{productName}</SelectMarketBtn>
           <LocationAndCart>
-            <FontAwesomeIcon icon={faCartShopping} size="xl" />
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 28 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M23.9898 7.93878L21.8742 16.9377H9.74865L7.64087 7.93878H23.9898Z"
+                stroke="black"
+                strokeWidth="1.7"
+                strokeLinecap="square"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M19.9764 22.9188C20.8956 22.9188 21.6408 22.1736 21.6408 21.2543C21.6408 20.3351 20.8956 19.5899 19.9764 19.5899C19.0571 19.5899 18.312 20.3351 18.312 21.2543C18.312 22.1736 19.0571 22.9188 19.9764 22.9188Z"
+                stroke="black"
+                strokeWidth="1.7"
+                strokeLinecap="square"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M11.6464 22.9188C12.5657 22.9188 13.3109 22.1736 13.3109 21.2543C13.3109 20.3351 12.5657 19.5899 11.6464 19.5899C10.7272 19.5899 9.98199 20.3351 9.98199 21.2543C9.98199 22.1736 10.7272 22.9188 11.6464 22.9188Z"
+                stroke="black"
+                strokeWidth="1.7"
+                strokeLinecap="square"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M4.01642 5.0921H6.97197L8.34086 10.9254"
+                stroke="black"
+                strokeWidth="1.7"
+                strokeLinecap="square"
+                strokeLinejoin="round"
+              />
+            </svg>
           </LocationAndCart>
         </HeaderMain>
         <HeaderMenu>

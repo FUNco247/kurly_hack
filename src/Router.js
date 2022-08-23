@@ -3,6 +3,7 @@ import MainPage from "./routes/MainPage";
 import CategoryPage from "./routes/CategoryPage";
 import DetailPage from "./routes/DetailPage";
 import NewsPage from "./routes/NewsPage";
+import ThanksPage from "./routes/ThanksPage";
 
 function Router() {
   return (
@@ -10,6 +11,7 @@ function Router() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/news" element={<NewsPage />} />
+        <Route path="/thanks" element={<ThanksPage />} />
         <Route path="/product/:productId" element={<DetailPage />} />
         <Route path="/category/:categoryId" element={<CategoryPage />} />
       </Routes>

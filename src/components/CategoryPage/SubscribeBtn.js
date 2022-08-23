@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Btn = styled.div`
+const Btn = styled.button`
   background-color: #5f0080;
   min-width: 96vw;
   height: 52px;

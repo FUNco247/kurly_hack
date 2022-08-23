@@ -51,7 +51,6 @@ const Box = styled.div`
   position: relative;
   max-width: calc(40vw + 16px);
   justify-content: space-between;
-  padding-bottom: 16px;
   scroll-snap-align: start;
   div {
     margin: 1px;
@@ -72,7 +71,7 @@ const ProductImg = styled.div`
 `;
 
 const InfoBox = styled.div`
-  padding: 8px 0px;
+  padding-top: 8px;
 `;
 
 const ProductName = styled.div`
@@ -93,7 +92,7 @@ const ProductName = styled.div`
 const ProductPrice = styled.div`
   font-size: 14px;
   font-weight: bold;
-  padding-top: 8px;
+  padding-top: 1px;
 `;
 
 function Products({ title, categoryId, subtitle, items }) {
@@ -107,7 +106,6 @@ function Products({ title, categoryId, subtitle, items }) {
               전체보기 <FontAwesomeIcon icon={faAngleRight} />
             </span>
           </div>
-          <div>{subtitle}</div>
         </Link>
       </CategoryName>
       <Slider>

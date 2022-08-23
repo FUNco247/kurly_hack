@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -41,7 +39,7 @@ const Btn = styled.div`
 `;
 
 const onClick = () => {
-  alert("ㄱㅅ!");
+  alert("구매해주셔서 감사합니다! 컬리버드 화이팅!");
 };
 
 function PurchaseBtn() {

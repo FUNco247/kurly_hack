@@ -1,9 +1,4 @@
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLocationDot,
-  faShoppingCart,
-} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 const Header = styled.div`
@@ -127,8 +122,8 @@ function Navigator() {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M14.0047 23.3333C14.0047 23.3333 6.76666 17.5342 6.76666 11.9047C6.76666 9.98502 7.52924 8.14401 8.88662 6.78662C10.244 5.42923 12.085 4.66666 14.0047 4.66666C15.9243 4.66666 17.7653 5.42923 19.1227 6.78662C20.4801 8.14401 21.2427 9.98502 21.2427 11.9047C21.2427 17.5342 14.0047 23.3333 14.0047 23.3333Z"
                 stroke="white"
                 strokeWidth="1.7"
@@ -140,10 +135,47 @@ function Navigator() {
                 stroke="white"
                 strokeWidth="1.7"
                 strokeLinecap="square"
-                stroke-Linejoin="round"
+                strokeLinejoin="round"
               />
             </svg>
-            <FontAwesomeIcon icon={faShoppingCart} size="xl" />
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 28 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M23.9898 7.93878L21.8742 16.9377H9.74865L7.64087 7.93878H23.9898Z"
+                stroke="white"
+                strokeWidth="1.7"
+                strokeLinecap="square"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M19.9764 22.9188C20.8956 22.9188 21.6408 22.1736 21.6408 21.2543C21.6408 20.3351 20.8956 19.5899 19.9764 19.5899C19.0571 19.5899 18.312 20.3351 18.312 21.2543C18.312 22.1736 19.0571 22.9188 19.9764 22.9188Z"
+                stroke="white"
+                strokeWidth="1.7"
+                strokeLinecap="square"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M11.6464 22.9188C12.5657 22.9188 13.3109 22.1736 13.3109 21.2543C13.3109 20.3351 12.5657 19.5899 11.6464 19.5899C10.7272 19.5899 9.98199 20.3351 9.98199 21.2543C9.98199 22.1736 10.7272 22.9188 11.6464 22.9188Z"
+                stroke="white"
+                strokeWidth="1.7"
+                strokeLinecap="square"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M4.01642 5.0921H6.97197L8.34086 10.9254"
+                stroke="white"
+                strokeWidth="1.7"
+                strokeLinecap="square"
+                strokeLinejoin="round"
+              />
+            </svg>
           </LocationAndCart>
         </HeaderMain>
         <HeaderMenu>
