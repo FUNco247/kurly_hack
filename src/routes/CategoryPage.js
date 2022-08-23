@@ -18,8 +18,7 @@ const Wrapper = styled.div`
 
 const Board = styled.div`
   padding-top: 90px;
-  padding-bottom: 45px;
-  height: 95vh;
+  padding-bottom: 110px;
   display: flex;
   flex-direction: column;
   align-items: center;

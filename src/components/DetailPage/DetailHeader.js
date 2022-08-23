@@ -21,9 +21,8 @@ const Header = styled.div`
   height: 88px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 46px 44px;
+  grid-template-rows: 2fr;
   box-sizing: border-box;
-  border-bottom: solid 0.5px #999999;
   background-color: white;
 `;
 
@@ -66,6 +65,36 @@ const LocationAndCart = styled.div`
   }
 `;
 
+const HeaderMenu = styled.div`
+  height: 44px;
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 0.5px #999999;
+  font-size: 15px;
+  font-weight: 500;
+  color: #666666;
+  div {
+    &:first-child {
+      margin-left: 24px;
+      color: #5f0080;
+      border-bottom: solid 2px #5f0080;
+    }
+    &:last-child {
+      margin-right: 24px;
+    }
+  }
+`;
+
+const Menu = styled.div`
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666666;
+`;
+
 function DetailHeader({ productName }) {
   const param = useParams();
   const navigate = useNavigate();
@@ -81,6 +110,12 @@ function DetailHeader({ productName }) {
             <FontAwesomeIcon icon={faCartShopping} size="xl" />
           </LocationAndCart>
         </HeaderMain>
+        <HeaderMenu>
+          <Menu>상품설명</Menu>
+          <Menu>상세정보</Menu>
+          <Menu>후기</Menu>
+          <Menu>문의</Menu>
+        </HeaderMenu>
       </Header>
     </>
   );

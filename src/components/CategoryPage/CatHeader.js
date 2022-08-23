@@ -117,7 +117,7 @@ function CatHeader({ categories }) {
 
           <SelectMarketBtn>컬리버드</SelectMarketBtn>
           <LocationAndCart>
-            <FontAwesomeIcon icon={faShoppingCart} size="xl" />
+            <FontAwesomeIcon icon={faShoppingCart} />
           </LocationAndCart>
         </HeaderMain>
         <Slider>

@@ -16,7 +16,6 @@ const Wrapper = styled.div`
 const Board = styled.div`
   padding-top: 46px;
   padding-bottom: 45px;
-  height: 100vh;
 `;
 
 function NewsPage() {

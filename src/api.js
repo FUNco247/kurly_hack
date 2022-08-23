@@ -29,3 +29,13 @@ export async function getDetail(productId) {
   const json = await response.json();
   return json;
 }
+
+export async function getPrice(categoryId) {
+  const response = await fetch(
+    `http://3.34.2.197:8080/product/price-info/${categoryId}`
+  );
+  const json = await response.json();
+  return json;
+}
+
+//`http://3.34.2.197:8080/product/price-info/${categoryId}`

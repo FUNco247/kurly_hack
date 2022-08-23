@@ -18,7 +18,6 @@ const Wrapper = styled.div`
 const Board = styled.div`
   padding-top: 88px;
   padding-bottom: 45px;
-  height: 95vh;
 `;
 
 const Box = styled.div``;
