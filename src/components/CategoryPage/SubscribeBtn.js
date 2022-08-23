@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const Btn = styled.button`
@@ -14,10 +15,15 @@ const Btn = styled.button`
   justify-content: center;
   border-radius: 6px;
   margin-left: 2vw;
+  border: none;
 `;
 
 function SubscribeBtn() {
-  return <Btn>가격 변동 알람 받기</Btn>;
+  const navigate = useNavigate();
+  const onClick = () => {
+    navigate("/subscribe");
+  };
+  return <Btn onClick={onClick}>가격 변동 알람 받기</Btn>;
 }
 
 export default SubscribeBtn;
