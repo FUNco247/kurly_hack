@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@capacitor/android": "^4.1.0",
+    "@capacitor/android": "4.1.0",
     "@capacitor/core": "^4.1.0",
     "@capacitor/ios": "4.1.0",
     "@fortawesome/fontawesome-svg-core": "^6.1.2",
@@ -23,7 +23,6 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.5",
-    "styled-react-modal": "^3.0.0",
     "styled-reset": "^4.4.2",
     "web-vitals": "^2.1.4"
   },

@@ -7,7 +7,6 @@ import CatHeader from "../components/CategoryPage/CatHeader";
 import LineChart from "../components/CategoryPage/LineChart";
 import Articles from "../components/mainPage/Articles";
 import OtherProdunts from "../components/CategoryPage/OtherProducts";
-import ModalButton from "../components/CategoryPage/Modal";
 import SubscribeBtn from "../components/CategoryPage/SubscribeBtn";
 
 const Wrapper = styled.div`
