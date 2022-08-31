@@ -77,7 +77,7 @@ function BarChart({ priceData }) {
             },
           },
           title: {
-            text: "가격이 오르고 있는 상품 TOP5",
+            text: "가격이 오르고 있는 상품",
             align: "left",
             margin: 0,
             offsetX: 8,
